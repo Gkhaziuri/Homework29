@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // N1 გამოიყენეთ ყველა  სტრინგის მეთოდი რაც აქ არის ჩამოთვლილი და დალოგეთ კონსოლში ყველა მნიშვნელობა, ისე როგორც ლექციაზე გავაკეთეთ
+        
+        // let text = "My name is Giorgi and I'm 21 years old."
+        // let length = text.length;
+        // console.log(length);
+
+
+        // let text = "Football, Basketball, Tennis";
+        // let part = text.slice(22, 29);
+        // console.log(part);
+
+        // let string = "Football, Basketball, Tennis";
+        // let part = string.substring(22.29);
+        // console.log(part);
+
+        // let string = "Football, Basketball, Tennis";
+        // let part = string.substr(0, 8);
+        // console.log(part);
+
+        // let text = "You can visit me anytime."
+        // let replacedText = text.replace("anytime", "on Saturday");
+        // console.log(replacedText);
+        
+        // let text = ("I love basketball. I want to be a professional basketball player.")
+        // text = text.replaceAll("basketball", "football")
+        // console.log(text);
+
+        // let text1 = "welcome to georgia!";
+        // let text2 = text1.toUpperCase();
+        // console.log(text2);
+        
+        // let text1 = ("welcome");
+        // let text2 = ("to");
+        // let text3 = ("Georgia!");
+        // let text4 = text1.concat(" ",text2, " ", text3);
+        // console.log(text4);
+
+        // let text1 = "         Welcome to Georgia!           ";
+        // let text2 = text1.trim();
+        // console.log(text2);
+
+        // let text1 = "         Welcome to Georgia!           ";
+        // let text2 = text1.trimEnd();
+        // console.log(text2);
+
+        // let text = "10";
+        // let paddedText = text.padStart (10, "0");
+        // console.log(paddedText);
+
+        // let text = "Welcome to Georgia!";
+        // let char = text.charAt(8);
+        // console.log(char);
+        
+        // let text = "Welcome to Georgia!";
+        // let char = text.charCodeAt (3);
+        // console.log(char);
+
+        // let text = "Welcome to Georgia!";
+        // let splitText = text.split("");
+        // console.log(splitText);
+
+
+        // N2  მოცემულია კომენტარების მასივი, dom მანიპულაციით გამოიტანეთ ყველა ინფორმაცია ქარდებში, გამოიყენეთ შესაბამისი მნიშნვნელობის მქონე ტეგები და ერთმანეთის გვერდიგვერდ განათავსეთ ყველა ელემენტი flex ან grid ის საშუალებით
+
+        let users = [
+            {
+                "postId": 1,
+                "id": 1,
+                "name": "id labore ex et quam laborum",
+                "email": "Eliseo@gardner.biz",
+                "body": "laudantium enim quasi est quidem magnam voluptate ipsam eos\ntempora quo necessitatibus\ndolor quam autem quasi\nreiciendis et nam sapiente accusantium"
+            },
+            {
+                "postId": 1,
+                "id": 2,
+                "name": "quo vero reiciendis velit similique earum",
+                "email": "Jayne_Kuhic@sydney.com",
+                "body": "est natus enim nihil est dolore omnis voluptatem numquam\net omnis occaecati quod ullam at\nvoluptatem error expedita pariatur\nnihil sint nostrum voluptatem reiciendis et"
+            },
+            {
+                "postId": 1,
+                "id": 3,
+                "name": "odio adipisci rerum aut animi",
+                "email": "Nikita@garfield.biz",
+                "body": "quia molestiae reprehenderit quasi aspernatur\naut expedita occaecati aliquam eveniet laudantium\nomnis quibusdam delectus saepe quia accusamus maiores nam est\ncum et ducimus et vero voluptates excepturi deleniti ratione"
+            },
+            {
+                "postId": 1,
+                "id": 4,
+                "name": "alias odio sit",
+                "email": "Lew@alysha.tv",
+                "body": "non et atque\noccaecati deserunt quas accusantium unde odit nobis qui voluptatem\nquia voluptas consequuntur itaque dolor\net qui rerum deleniti ut occaecati"
+            },
+            {
+                "postId": 1,
+                "id": 5,
+                "name": "vero eaque aliquid doloribus et culpa",
+                "email": "Hayden@althea.biz",
+                "body": "harum non quasi et ratione\ntempore iure ex voluptates in ratione\nharum architecto fugit inventore cupiditate\nvoluptates magni quo et"
+            }
+        ]
+        const card = document.getElementById("users-li")
+        for(let i = 0; i < users.length; i++ ) {
+            const userItem = document.createElement("li");
+
+            const name = document.createElement("span");
+            name.textContent = ` My name is ${users[i].name}`;
+            userItem.appendChild(name);
+
+            const email = document.createElement("span");
+            email.textContent = `My email address is ${users[i].email}`
+            userItem.appendChild(email);
+
+            const text = document.createElement("p");
+            text.textContent = `${users[i].body}`
+            userItem.appendChild(text);
+
+            card.appendChild(userItem);
+        }
+
+
+
+
+
+    </script>
+
+
+</body>
+</html>
